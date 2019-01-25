@@ -1,0 +1,32 @@
+/* ==================================================== */
+/* Variables
+/* ==================================================== */
+
+
+/* レスポンシブ対応 メディアクエリ用 */
+/* 使用例 
+/* @media ($tab_sm) { ~~~ } */
+
+$retina: 'min-width: 2560px';
+$desktop_lg: 'min-width: 1920px';
+$desktop_sm: 'min-width: 1366px';
+$laptop: 'min-width: 1280px';
+$tab_lg: 'min-width: 1080px';
+$tab_sm: 'min-width: 768px';
+$tab_xsm: 'min-width: 600px';
+$sp_lg: 'min-width: 375px';
+
+
+//コンテンツ最大幅 
+// 使用例 
+// max-width: $maw_maw_sl;
+
+$maw_retina: 1800px;
+$maw_dl: 1390px;
+$maw_ds: 1160px;
+$maw_l: 1080px;
+$maw_tl: 90%;
+$maw_ts: 90%;
+$maw_sl: 90%;
+
+

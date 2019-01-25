@@ -1,0 +1,76 @@
+/* ============================================= */
+/* Front Page 
+/* ============================================= */
+
+.main {
+  width: 100%;
+}
+
+.main-container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px 0;
+  
+}
+
+.front-main {
+  margin-bottom: 20px;
+}
+
+.front-main-container {
+  width: 100%;
+  margin: 0 auto; 
+}
+
+@media (min-width: 600px) {
+  .front-main-container {
+    width: 90%; 
+  }
+}
+
+@media (min-width: 768px) {
+  .front-main-container {
+    width: 60%; 
+  } 
+}
+@media (min-width: 1080px) {
+  .main-container {
+    -js-display: flex;
+    /*--- IE8, 9---*/
+    display: -webkit-box;
+    /*--- Androidブラウザ用 ---*/
+    display: -ms-flexbox;
+    /*--- IE10 ---*/
+    display: -webkit-flex;
+    /*--- safari（PC）用 ---*/
+    display: flex;
+    -webkit-box-align: center;
+    /*--- Androidブラウザ用 ---*/
+    -ms-flex-align: center;
+    /*--- IE10 ---*/
+    -webkit-align-items: center;
+    /*--- safari（PC）用 ---*/
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    /*--- safari（PC）用 ---*/
+    flex-wrap: wrap;
+    -webkit-box-pack: space-between;
+    /*--- Androidブラウザ用 ---*/
+    -ms-flex-pack: space-between;
+    /*--- IE10 ---*/
+    -webkit-justify-content: space-between;
+    /*--- safari（PC）用 ---*/
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+
+  .front-main {
+    width:  47%;
+  }
+
+  .front-main-container {
+    width: 100%; 
+  }
+
+}
+

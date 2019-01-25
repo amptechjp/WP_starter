@@ -1,0 +1,37 @@
+/* ============================================= */
+/* Front Page
+/* ============================================= */
+
+.main {
+  width: 100%;
+  &-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0;
+    @media ($tab_lg) {
+      @include flex;
+      max-width: 1200px;
+    }
+  }
+}
+
+// section.front-main
+.front-main {
+  margin-bottom: 20px;
+  @media (min-width: 1024px) {
+    width: 47%;
+  }
+  &-container {
+    width: 100%;
+    margin: 0 auto;
+    @media ($tab_xsm) {
+      width: 90%;
+    }
+    @media ($tab_sm) {
+      width: 60%;
+    }
+    @media ($tab_lg) {
+      width: 100%;
+    }
+  }
+}

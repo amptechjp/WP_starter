@@ -1,0 +1,41 @@
+div.wpcf7 {
+  max-width: 700px;
+  margin: 0 auto;
+
+  label {
+    width: 100%;
+    input {
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      border: none;
+      border: none;
+    }
+
+  }
+  input[type="submit"] {
+    margin: 0 auto;
+    display: block;
+    width: 180px;
+    text-align: center;
+    color: $white;
+    background-color: $primary;
+    padding: 8px 16px;
+    border: 1px solid $primary;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+    border-radius: 4px;
+    @include transition;
+    &:hover {
+      box-shadow: none;
+      background-color: transparent;
+      color: $primary;
+      @include transition;
+
+
+
+    }
+  }
+}

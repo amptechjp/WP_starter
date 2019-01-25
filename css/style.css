@@ -1,0 +1,348 @@
+@charset "UTF-8";
+/*
+Theme Name: Template Name Here 1.0
+Theme URI: https://urlhere.jp/
+Version: 1.0
+Description: This theme is exclusively for Some Organization Name usually clients.
+Author: Developer Name Here.
+Author URI: https://developerurl.com
+License: GNU Gneral Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: templatename
+*/
+/* ==================================================== */
+/* Base Imports
+/* ==================================================== */
+/* ==================================================== */
+/* Variables
+/* ==================================================== */
+/* レスポンシブ対応 メディアクエリ用 */
+/* 使用例 
+/* @media ($tab_sm) { ~~~ } */
+/* ==================================================== */
+/* Font
+/* ==================================================== */
+body {
+  font-family: "Lato", 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 游ゴシック体, 'Yu Gothic', YuGothic, メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em; }
+
+.en {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; }
+
+.en-bold {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; }
+
+.en-thin {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300; }
+
+h1 {
+  font-size: 28px; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 34px; } }
+  @media (min-width: 1280px) {
+    h1 {
+      font-size: 46px; } }
+
+h2 {
+  font-size: 21px; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 24px; } }
+  @media (min-width: 1280px) {
+    h2 {
+      font-size: 24px; } }
+
+/* ==================================================== */
+/* Colors
+/* ==================================================== */
+/* ==================================================== */
+/* Mixin
+/* ==================================================== */
+/* ==================================================== */
+/* Base 
+/* ==================================================== */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+html, body,
+div, p, span, blockquote,
+strong, h1, h2, h3, h4, h5,
+ul, ol, dl, li, dt, dd,
+table, tr, td, th,
+main, aside, section, nav, header, footer {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  list-style-type: none; }
+
+a {
+  color: #64C48F;
+  text-decoration: underline;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease; }
+  a:hover {
+    text-decoration: none;
+    color: #64C48F;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease; }
+
+a.no-border {
+  text-decoration: none; }
+  a.no-border:hover {
+    opacity: 0.8; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+hr {
+  margin: 30px auto;
+  width: 90%;
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid #9A9A9A; }
+
+/* ==================================================== */
+/* Components Imports
+/* ==================================================== */
+div.wpcf7 {
+  max-width: 700px;
+  margin: 0 auto; }
+  div.wpcf7 label {
+    width: 100%; }
+    div.wpcf7 label input {
+      margin-bottom: 10px; }
+    div.wpcf7 label input[type="text"],
+    div.wpcf7 label input[type="email"],
+    div.wpcf7 label textarea {
+      width: 100%;
+      border: none;
+      border: none; }
+  div.wpcf7 input[type="submit"] {
+    margin: 0 auto;
+    display: block;
+    width: 180px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #64C48F;
+    padding: 8px 16px;
+    border: 1px solid #64C48F;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease; }
+    div.wpcf7 input[type="submit"]:hover {
+      box-shadow: none;
+      background-color: transparent;
+      color: #64C48F;
+      -webkit-transition: all .25s ease;
+      -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+      -o-transition: all .25s ease;
+      transition: all .25s ease; }
+
+/* ==================================================== */
+/* Layout Imports
+/* ==================================================== */
+/* ============================================= */
+/* Header
+/* ============================================= */
+.header {
+  width: 100%;
+  background-color: #64C48F; }
+  .header-container {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 8px 0; }
+  .header-logo {
+    text-align: center; }
+    .header-logo__link {
+      font-size: 21px;
+      color: #ffffff; }
+  .header-menu {
+    width: 100%; }
+    .header-menu__list {
+      -js-display: flex;
+      /*--- IE8, 9---*/
+      display: -webkit-box;
+      /*--- Androidブラウザ用 ---*/
+      display: -ms-flexbox;
+      /*--- IE10 ---*/
+      display: -webkit-flex;
+      /*--- safari（PC）用 ---*/
+      display: flex;
+      -webkit-box-align: center;
+      /*--- Androidブラウザ用 ---*/
+      -ms-flex-align: center;
+      /*--- IE10 ---*/
+      -webkit-align-items: center;
+      /*--- safari（PC）用 ---*/
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      /*--- safari（PC）用 ---*/
+      flex-wrap: wrap;
+      -webkit-box-pack: space-between;
+      /*--- Androidブラウザ用 ---*/
+      -ms-flex-pack: space-between;
+      /*--- IE10 ---*/
+      -webkit-justify-content: space-between;
+      /*--- safari（PC）用 ---*/
+      justify-content: space-between; }
+    .header-menu__item {
+      width: 50%;
+      text-align: center; }
+      @media (min-width: 600px) {
+        .header-menu__item {
+          width: 25%; } }
+    .header-menu__link {
+      color: #ffffff; }
+
+/* ============================================= */
+/* Footer
+/* ============================================= */
+.footer {
+  background-color: #F6F4F1; }
+  .footer .footer-container {
+    padding: 50px 0;
+    width: 95%;
+    max-width: 1390px;
+    margin: 0 auto; }
+    @media (min-width: 1920px) {
+      .footer .footer-container {
+        max-width: 1600px; } }
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 30px; }
+  .footer-menu {
+    text-align: center; }
+    @media (min-width: 768px) {
+      .footer-menu__list {
+        -js-display: flex;
+        /*--- IE8, 9---*/
+        display: -webkit-box;
+        /*--- Androidブラウザ用 ---*/
+        display: -ms-flexbox;
+        /*--- IE10 ---*/
+        display: -webkit-flex;
+        /*--- safari（PC）用 ---*/
+        display: flex;
+        -webkit-box-align: center;
+        /*--- Androidブラウザ用 ---*/
+        -ms-flex-align: center;
+        /*--- IE10 ---*/
+        -webkit-align-items: center;
+        /*--- safari（PC）用 ---*/
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        /*--- safari（PC）用 ---*/
+        flex-wrap: wrap;
+        -webkit-box-pack: space-between;
+        /*--- Androidブラウザ用 ---*/
+        -ms-flex-pack: space-between;
+        /*--- IE10 ---*/
+        -webkit-justify-content: space-between;
+        /*--- safari（PC）用 ---*/
+        justify-content: space-between;
+        max-width: 700px;
+        margin: 0 auto; } }
+
+/* ============================================= */
+/* Home Page
+/* ============================================= */
+/* ============================================= */
+/* Front Page
+/* ============================================= */
+.main {
+  width: 100%; }
+  .main-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0; }
+    @media (min-width: 1080px) {
+      .main-container {
+        -js-display: flex;
+        /*--- IE8, 9---*/
+        display: -webkit-box;
+        /*--- Androidブラウザ用 ---*/
+        display: -ms-flexbox;
+        /*--- IE10 ---*/
+        display: -webkit-flex;
+        /*--- safari（PC）用 ---*/
+        display: flex;
+        -webkit-box-align: center;
+        /*--- Androidブラウザ用 ---*/
+        -ms-flex-align: center;
+        /*--- IE10 ---*/
+        -webkit-align-items: center;
+        /*--- safari（PC）用 ---*/
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        /*--- safari（PC）用 ---*/
+        flex-wrap: wrap;
+        -webkit-box-pack: space-between;
+        /*--- Androidブラウザ用 ---*/
+        -ms-flex-pack: space-between;
+        /*--- IE10 ---*/
+        -webkit-justify-content: space-between;
+        /*--- safari（PC）用 ---*/
+        justify-content: space-between;
+        max-width: 1200px; } }
+
+.front-main {
+  margin-bottom: 20px; }
+  @media (min-width: 1024px) {
+    .front-main {
+      width: 47%; } }
+  .front-main-container {
+    width: 100%;
+    margin: 0 auto; }
+    @media (min-width: 600px) {
+      .front-main-container {
+        width: 90%; } }
+    @media (min-width: 768px) {
+      .front-main-container {
+        width: 60%; } }
+    @media (min-width: 1080px) {
+      .front-main-container {
+        width: 100%; } }
+
+/* ============================================= */
+/* Archive
+/* ============================================= */
+/* ============================================= */
+/* Category Page
+/* ============================================= */
+/* ============================================= */
+/* Page (固定ページ)
+/* ============================================= */
+/* ============================================= */
+/* Single Page (投稿)
+/* ============================================= */
+
+/*# sourceMappingURL=style.css.map */

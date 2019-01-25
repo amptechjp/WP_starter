@@ -1,0 +1,150 @@
+/* ==================================================== */
+/* Mixin
+/* ==================================================== */
+
+@mixin beforebg($rgba: rgba(255,255,255,.4)) {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $rgba;
+  }
+}
+
+
+
+@mixin transition {
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+
+
+@mixin transition-hover($duration: .25s, $timing: ease, $opacity: 0.8) {
+  -webkit-transition: all $duration $timing;
+  -moz-transition: all $duration $timing;
+  -ms-transition: all $duration $timing;
+  -o-transition: all $duration $timing;
+  transition: all $duration $timing;
+  &:hover {
+    -webkit-transition: all $duration $timing;
+    -moz-transition: all $duration $timing;
+    -ms-transition: all $duration $timing;
+    -o-transition: all $duration $timing;
+    transition: all $duration $timing;
+    opacity: $opacity;
+  }
+}
+
+
+
+@mixin flex( $justify: space-between, $align-items: center ) {
+  -js-display: flex; /*--- IE8, 9---*/
+  display: -webkit-box;/*--- Androidブラウザ用 ---*/
+  display: -ms-flexbox;/*--- IE10 ---*/
+  display: -webkit-flex;/*--- safari（PC）用 ---*/
+  display: flex;
+  -webkit-box-align: $align-items;/*--- Androidブラウザ用 ---*/
+  -ms-flex-align: $align-items;/*--- IE10 ---*/
+  -webkit-align-items: $align-items;/*--- safari（PC）用 ---*/
+  align-items: $align-items;
+
+  -webkit-flex-wrap: wrap;/*--- safari（PC）用 ---*/
+  flex-wrap: wrap;
+
+  -webkit-box-pack: $justify;/*--- Androidブラウザ用 ---*/
+  -ms-flex-pack: $justify;/*--- IE10 ---*/
+  -webkit-justify-content: $justify;/*--- safari（PC）用 ---*/
+  justify-content: $justify;
+}
+
+
+@mixin order( $order: 0 ) {
+  -webkit-order: $order;
+  order: $order;
+}
+
+
+
+@mixin flex_prefix_wrap {
+  -js-display: flex; /*--- IE8, 9---*/
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;     /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-wrap: wrap;
+}
+
+
+
+@mixin font-base ( $fs: 14px, $lh: 1.4, $fw: 300, $c: $black) {
+  font-family: 'Rajdhani', Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin hw {
+  font-family: "house-script", sans-serif;
+}
+
+@mixin bolden {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+@mixin resp-width ( $width: 90% ) {
+  display: block;
+  width: $width;
+  max-width: $max-width;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+
+
+@mixin gradient-bg ( $start: #00C7C7, $end: #02BC75) {
+  background: $end;
+  background: -moz-linear-gradient(45deg, $start, $end); /* Firefox用 */
+  background: -o-linear-gradient(45deg, $start, $end); /* Opera */
+  background: -webkit-gradient(linear,left top,left bottom,from($start),to($end)); /* Safari,Google Chrome用 */
+  background: linear-gradient(45deg,$start,$end);
+}
+
+
+@mixin gradient-black {
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#4d000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin allcenter( $w: 80%, $h: 200px ) {
+  margin: auto;
+  position: absolute;
+  width: $w;
+  height: $h;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+
+// ==============================
+// 追加・変更
+// ==============================
+
+@mixin backimg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

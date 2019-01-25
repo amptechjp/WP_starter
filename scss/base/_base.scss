@@ -1,0 +1,62 @@
+/* ==================================================== */
+/* Base 
+/* ==================================================== */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html, body,
+div, p, span, blockquote,
+strong, h1, h2, h3, h4, h5,
+ul, ol, dl, li, dt, dd,
+table, tr, td, th,
+main, aside, section, nav, header, footer {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  color: $primary;
+  text-decoration: underline;
+  @include transition;
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+    @include transition;
+  }
+}
+
+a.no-border {
+  text-decoration: none;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  margin: 30px auto;
+  width: 90%;
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid $gray;
+}

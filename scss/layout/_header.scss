@@ -1,0 +1,55 @@
+/* ============================================= */
+/* Header
+/* ============================================= */
+
+.header {
+  width: 100%;
+  background-color: $primary;
+  &-container {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 8px 0;
+  }
+
+  // header-logo
+  &-logo {
+    text-align: center;
+    &__link {
+      font-size: 21px;
+      color: $white;
+    }
+  }
+
+  // header-menu
+  &-menu {
+    width: 100%;
+    @media (min-width: 600px) {
+
+    }
+
+    &-container {
+
+    }
+    
+    // ul.header-menu__list
+    &__list {
+      @include flex;
+    }
+
+    // li.header-menu__item 
+    &__item {
+      width: 50%;
+      text-align: center;
+      
+      @media (min-width: 600px) {
+        width: 25%;
+      }
+    }
+
+    // a.header-menu__link 
+    &__link {
+      color: $white;
+    }
+  }
+}

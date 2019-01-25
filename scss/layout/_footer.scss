@@ -1,0 +1,37 @@
+/* ============================================= */
+/* Footer
+/* ============================================= */
+
+.footer {
+  background-color: $bg;
+
+  .footer-container {
+    padding: 50px 0;
+    width: 95%;
+    max-width: 1390px;
+    margin: 0 auto;
+    @media (min-width: 1920px) {
+      max-width: 1600px;
+    }
+  }
+  &-logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &-menu {
+    text-align: center;
+    &-container {
+
+    }
+
+    &__list {
+      @media (min-width: 768px) {
+        @include flex;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+}
